@@ -31,14 +31,7 @@ Licensed under the MIT.
 2. After activating Fotorama your galleries turn into fotoramas.
 3. Say Hi to Fotorama!
 
-== Screenshots ==
-
-1. Fotorama post with responsive Twenty Thirteen theme
-2. Neat with Twenty Twelve theme
-3. Seamless responsive
-4. Looks well with every background
-
-== Customize ==
+= Customize =
 
 Control a single fotorama using [standard gallery shortcode](http://codex.wordpress.org/Gallery_Shortcode):
 
@@ -121,3 +114,10 @@ To move dots or thumbs on top, use `navposition="top"`:
     [gallery ids="1,2,3" navposition="top"]
 
 Hide navigation with `nav="false"`.
+
+== Screenshots ==
+
+1. Fotorama post with responsive Twenty Thirteen theme
+2. Neat with Twenty Twelve theme
+3. Seamless responsive
+4. Looks well with every background
