@@ -32,6 +32,10 @@ Licensed under the MIT.
 2. After activating Fotorama your galleries turn into fotoramas.
 3. Say Hi to Fotorama!
 
+Installation screencast:
+
+<iframe width="480" height="360" src="//www.youtube.com/embed/gsObwOvtt_o" frameborder="0" allowfullscreen></iframe>
+
 = Customize =
 
 Control a single fotorama using [standard gallery shortcode](http://codex.wordpress.org/Gallery_Shortcode):
