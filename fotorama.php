@@ -81,10 +81,10 @@ function fotorama_scripts()
 
 		wp_register_script('fotorama-wp.js', FOTORAMA_PLUGIN_URL . 'fotorama-wp.js');
 		wp_enqueue_script('fotorama-wp.js');
-	} else {
-		wp_register_style('fotorama-wp.css', FOTORAMA_PLUGIN_URL . 'fotorama-wp.css');
-		wp_enqueue_style('fotorama-wp.css');
 	}
+
+	wp_register_style('fotorama-wp.css', FOTORAMA_PLUGIN_URL . 'fotorama-wp.css');
+	wp_enqueue_style('fotorama-wp.css');
 }
 
 ?>
