@@ -88,7 +88,7 @@ The show stops on touch. Change this with `stopautoplayontouch="false"`.
 
     [gallery ids="1,2,3" shuffle="true"]
 
-[**Keyboard**](http://fotorama.io/customize/keyboard/)**
+[**Keyboard**](http://fotorama.io/customize/keyboard/)
 <br>Turn on keyboard navigation with the arrows by adding `keyboard="true"`:
 
     [gallery ids="1,2,3" keyboard="true"]
