@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, slider, images, photos, slideshow
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 4.3.4
+Stable tag: 4.3.4.1
 License: MIT
 License URI: http://fotorama.io/license
 
