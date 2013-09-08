@@ -57,7 +57,7 @@ Fotorama’s default settings are good, so there’s no need to mess with them. 
 [**Fit**](http://fotorama.io/customize/fit/)
 <br>There are 4 ways to fit an image into a fotorama: `contain`, `cover`, `scaledown`, and `none`. Choose one:
 
-		[gallery ids="1,2,3" fit="cover"]
+    [gallery ids="1,2,3" fit="cover"]
 
 [**Transition**](http://fotorama.io/customize/transition/)
 <br>Define which transition to use — `slide` or `crossfade` — using `transition`:
