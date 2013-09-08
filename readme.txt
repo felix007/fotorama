@@ -1,6 +1,6 @@
 === Fotorama ===
 Contributors: artpolikarpov
-Donate link: http://fotorama.io/contact/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7M9KK5AQPG6CC
 Tags: gallery, slider, images, photos, slideshow
 Requires at least: 3.5
 Tested up to: 3.6
@@ -16,12 +16,13 @@ Transforms standard galleries into fotoramas.
 
 * All Browsers. From IE 7 to Safari on iOS. Including Android and Windows Phone.
 * Neat and transparent. Looks great by default, even better with your settings.
-* Compact in-page and epic full-screen mode.
+* Compact in-page and epic fullscreen mode.
 * Touch gestures. Fine response to drag and swipe.
-* Responsive.
+* Seamless responsive.
 * Fast CSS3 transitions.
 * Save Bandwidth. Fotorama lazy loads only one image ahead.
 * Let Fotorama play photos automatically. The show will stop on touch.
+* Thumbnails, shuffle, keyboard navigations, loop, and more...
 
 Licensed under the MIT.
 
@@ -41,75 +42,64 @@ Shortcode will take the following core attributes: `ids`, `orderby`, `order`, `i
 
 Fotorama’s default settings are good, so there’s no need to mess with them. Still, you can fine-tune. Add any attributes that are listed [in the original documentation](http://fotorama.io/customize/), but without `data-` prefix.
 
-**[Thumbnails](http://fotorama.io/customize/thumbnails/) =
-
-Change navigation style from iPhone-style dots to thumbnails by adding `nav="thumbs"`:
+[**Thumbnails**](http://fotorama.io/customize/thumbnails/)
+<br>Change navigation style from iPhone-style dots to thumbnails by adding `nav="thumbs"`:
 
     [gallery ids="1,2,3" nav="thumbs"]
 
-**[Fullscreen](http://fotorama.io/customize/fullscreen/) =
-
-Allow fotorama to enter fullscreen using `allowfullscreen`:
+[**Fullscreen**](http://fotorama.io/customize/fullscreen/)
+<br>Allow fotorama to enter fullscreen using `allowfullscreen`:
 
     [gallery ids="1,2,3" allowfullscreen="true"]
 
-**[Fit](http://fotorama.io/customize/fit/) =
-
-There are 4 ways to fit an image into a fotorama: `contain`, `cover`, `scaledown`, and `none`. Choose one:
+[**Fit**](http://fotorama.io/customize/fit/)
+<br>There are 4 ways to fit an image into a fotorama: `contain`, `cover`, `scaledown`, and `none`. Choose one:
 
 		[gallery ids="1,2,3" fit="cover"]
 
-**[Transition](http://fotorama.io/customize/transition/) =
-
-Define which transition to use — `slide` or `crossfade` — using `transition`:
+[**Transition**](http://fotorama.io/customize/transition/)
+<br>Define which transition to use — `slide` or `crossfade` — using `transition`:
 
     [gallery ids="1,2,3" transition="crossfade"]
 
-**[Hash](http://fotorama.io/customize/hash/) =
-
-Attribute `hash="true"` lets the page change its URL upon switching images. To send a link to a specific photo to a friend :-)
+[**Hash**](http://fotorama.io/customize/hash/)
+<br>Attribute `hash="true"` lets the page change its URL upon switching images. To send a link to a specific photo to a friend :-)
 
     [gallery ids="1,2,3" hash="true"]
 
 Better be used with only one fotorama per page.
 
-**[Loop](http://fotorama.io/customize/loop/) =
-
-Loop the last and the first frame for seamless transition using `loop="true"`:
+[**Loop**](http://fotorama.io/customize/loop/)
+<br>Loop the last and the first frame for seamless transition using `loop="true"`:
 
     [gallery ids="1,2,3" loop="true"]
 
-**[Autoplay](http://fotorama.io/customize/autoplay/)**
-
-Let Fotorama play photos automatically using `autoplay="true"`. By default, a pause between images is 5 seconds. Set any interval in milliseconds, for example, 3 seconds:
+[**Autoplay**](http://fotorama.io/customize/autoplay/)
+<br>Let Fotorama play photos automatically using `autoplay="true"`. By default, a pause between images is 5 seconds. Set any interval in milliseconds, for example, 3 seconds:
 
     [gallery ids="1,2,3" autoplay="3000"]
 
 The show stops on touch. Change this with `stopautoplayontouch="false"`.
 
-**[Shuffle](http://fotorama.io/customize/shuffle/)**
-
-Shuffle frames by adding `shuffle="true"`:
+[**Shuffle**](http://fotorama.io/customize/shuffle/)
+<br>Shuffle frames by adding `shuffle="true"`:
 
     [gallery ids="1,2,3" shuffle="true"]
 
-**[Keyboard](http://fotorama.io/customize/keyboard/)**
-
-Turn on keyboard navigation with the arrows by adding `keyboard="true"`:
+[**Keyboard**](http://fotorama.io/customize/keyboard/)**
+<br>Turn on keyboard navigation with the arrows by adding `keyboard="true"`:
 
     [gallery ids="1,2,3" keyboard="true"]
 
 Works only for the first fotorama on page.
 
-**[Arrows, click, swipe](http://fotorama.io/customize/arrows-click-swipe/)**
-
-Control the way your users interact with the fotorama with three attributes `arrows`, `click`, and `swipe`:
+[**Arrows, click, swipe**](http://fotorama.io/customize/arrows-click-swipe/)
+<br>Control the way your users interact with the fotorama with three attributes `arrows`, `click`, and `swipe`:
 
     [gallery ids="1,2,3" arrows="true" click="true" swipe="false"]
 
-**[Navigation position](http://fotorama.io/customize/navigation-position/)**
-
-To move dots or thumbs on top, use `navposition="top"`:
+[**Navigation position**](http://fotorama.io/customize/navigation-position/)
+<br>To move dots or thumbs on top, use `navposition="top"`:
 
     [gallery ids="1,2,3" navposition="top"]
 
@@ -117,7 +107,7 @@ Hide navigation with `nav="false"`.
 
 == Screenshots ==
 
-1. Fotorama post with responsive Twenty Thirteen theme
-2. Neat with Twenty Twelve theme
+1. Fotorama post with responsive “Twenty Thirteen” theme
+2. Neat with “Twenty Twelve”
 3. Seamless responsive
 4. Looks well with every background
