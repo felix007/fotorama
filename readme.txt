@@ -109,7 +109,7 @@ Hide navigation with `nav="false"`.
 
 == Frequently Asked Questions ==
 
-= How not to repeat the same attributes in each `[gallery]`? Is it possible to override the defaults? =
+= How not to repeat the same attributes in each [gallery]? Is it possible to override the defaults? =
 
 Yes, there is a hack for that. Create file `fotoramaDefaults.js` in the `/wp-content/plugins/` directory and list your options like so:
 
