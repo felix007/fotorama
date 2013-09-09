@@ -21,6 +21,6 @@
 
 		$('.fotorama--wp')
 			.fotoramaWPApapter()
-			.fotorama($.Fotorama.defaults);
+			.fotorama(window.fotoramaDefaults);
 	});
 })(jQuery);

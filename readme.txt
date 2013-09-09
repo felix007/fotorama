@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, slider, images, photos, slideshow
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 4.3.4.1
+Stable tag: 4.3.4.2
 License: MIT
 License URI: http://fotorama.io/license
 
@@ -106,6 +106,22 @@ Works only for the first fotorama on page.
     [gallery ids="1,2,3" navposition="top"]
 
 Hide navigation with `nav="false"`.
+
+== Frequently Asked Questions ==
+
+= How not to repeat the same attributes in each `[gallery]`? Is it possible to override the defaults? =
+
+Yes, there is a hack for that. Create file `fotoramaDefaults.js` and list your options like so:
+
+    fotoramaDefaults = {
+      nav: 'thumbs',
+      allowfullscreen: 'native',
+      transition: 'crossfade',
+      loop: true,
+      keyboard: true
+    }
+
+Put `fotoramaDefaults.js` to the `/wp-content/plugins/` directory. <small>Not `/wp-content/plugins/fotorama/` in order not to lose it during the upgrade!</small>
 
 == Screenshots ==
 
