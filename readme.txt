@@ -111,7 +111,7 @@ Hide navigation with `nav="false"`.
 
 = How not to repeat the same attributes in each `[gallery]`? Is it possible to override the defaults? =
 
-Yes, there is a hack for that. Create file `fotoramaDefaults.js` and list your options like so:
+Yes, there is a hack for that. Create file `fotoramaDefaults.js` in the `/wp-content/plugins/` directory and list your options like so:
 
     fotoramaDefaults = {
       nav: 'thumbs',
@@ -121,7 +121,7 @@ Yes, there is a hack for that. Create file `fotoramaDefaults.js` and list your o
       keyboard: true
     }
 
-Put `fotoramaDefaults.js` to the `/wp-content/plugins/` directory. <small>Not `/wp-content/plugins/fotorama/` in order not to lose it during the upgrade!</small>
+Fotorama will try to fetch the options from the `/wp-content/plugins/fotoramaDefaults.js`.
 
 == Screenshots ==
 
