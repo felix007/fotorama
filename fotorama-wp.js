@@ -7,7 +7,7 @@
 		        	$fotorama = $('<div></div>');
 
 		        $('dl', this).each(function () {
-		            var $a = $('a', this);
+		            var $a = $('dt a', this);
 		            $fotorama.append(
 		            	$a.attr('data-caption', $('dd', this).text())
 		            );
@@ -21,6 +21,6 @@
 
 		$('.fotorama--wp')
 			.fotoramaWPApapter()
-			.fotorama(window.fotoramaDefaults);
+			.fotorama();
 	});
 })(jQuery);

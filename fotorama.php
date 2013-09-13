@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Fotorama
- * @version 4.3.4.2
+ * @version 4.4.0
  */
 /*
 Plugin Name: Fotorama
 Plugin URI: http://fotorama.io/
 Description: Transforms standard galleries into fotoramas. Fotorama is a simple, stunning, powerful jQuery gallery. Licensed under the MIT.
 Author: Artem Polikarpov
-Version: 4.3.4.2
+Version: 4.4.0
 Author URI: https://github.com/artpolikarpov
 */
 
@@ -26,6 +26,11 @@ function fotorama_gallery_shortcode($atts)
 	$atts['captiontag'] = 'dd';
 	$atts['columns'] = 0;
 
+	if (array_key_exists('orderby', $atts) && $atts['orderby'] == 'rand') {
+		$atts['orderby'] = '';
+		$atts['shuffle'] = 'true';
+	}
+
 	$atts['size'] = 'thumbnail';
 	$gallery = gallery_shortcode($atts);
 
@@ -33,11 +38,11 @@ function fotorama_gallery_shortcode($atts)
 	$height = array_key_exists('height', $atts) ? $atts['height'] : '';
 
 	$atts['size'] = 'large';
-	preg_match_all('/<img[^<>]*>/', gallery_shortcode($atts), $images);
-	preg_match_all('/href=(\'|")[^"\']+(\'|")/', $gallery, $hrefs);
+	preg_match_all('/(<img[^<>]*>).*\n*.*<\/dt/', gallery_shortcode($atts), $images);
+	preg_match_all('/href=(\'|")([^"\']+)(\'|").*\n*.*<\/dt/', $gallery, $hrefs);
 
 	for ($i = 0, $l = count($images[0]); $i < $l; $i++) {
-		$image = $images[0][$i];
+		$image = $images[1][$i];
 		preg_match('/src=(\'|")([^"\']+)(\'|")/', $image, $src);
 
 		if (!$i) {
@@ -52,7 +57,12 @@ function fotorama_gallery_shortcode($atts)
 			}
 		}
 
-		$gallery = str_replace(preg_replace('/href=(\'|")(.*)(\'|")/', '$2', $hrefs[0][$i]), $src[2], $gallery);
+		$quote = $hrefs[1][$i];
+		$full = $hrefs[2][$i];
+
+		$gallery = str_replace($quote . $full . $quote,
+			$quote . $src[2] . $quote . ' data-full=' . $quote . $full . $quote,
+			$gallery);
 	}
 
 	$atts['auto'] = 'false';
@@ -80,6 +90,7 @@ function fotorama_scripts()
 		wp_enqueue_script('fotorama.js');
 
 		if (file_exists(WP_PLUGIN_DIR . '/fotoramaDefaults.js')) {
+			// Override defaults
 			wp_register_script('fotoramaDefaults.js', WP_PLUGIN_URL . '/fotoramaDefaults.js');
 			wp_enqueue_script('fotoramaDefaults.js');
 		}
