@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Fotorama
- * @version 4.4.0
+ * @version 4.4.1
  */
 /*
 Plugin Name: Fotorama
 Plugin URI: http://fotorama.io/
 Description: Transforms standard galleries into fotoramas. Fotorama is a simple, stunning, powerful jQuery gallery. Licensed under the MIT.
 Author: Artem Polikarpov
-Version: 4.4.0
+Version: 4.4.1
 Author URI: https://github.com/artpolikarpov
 */
 
@@ -46,14 +46,18 @@ function fotorama_gallery_shortcode($atts)
 		preg_match('/src=(\'|")([^"\']+)(\'|")/', $image, $src);
 
 		if (!$i) {
+			preg_match('/width=(\'|")([^"\']+)(\'|")/', $image, $__width);
+			$_width = $__width[2];
+
+			preg_match('/height=(\'|")([^"\']+)(\'|")/', $image, $__height);
+			$_height = $__height[2];
+
 			if (!$width) {
-				preg_match('/width=(\'|")([^"\']+)(\'|")/', $image, $width);
-				$atts['width'] = $width[2];
+				$atts['width'] = $_width;
 			}
 
 			if (!$height) {
-				preg_match('/height=(\'|")([^"\']+)(\'|")/', $image, $height);
-				$height = $height[2];
+				$height = $_height;
 			}
 		}
 
@@ -67,7 +71,7 @@ function fotorama_gallery_shortcode($atts)
 
 	$atts['auto'] = 'false';
 	$atts['max-width'] = '100%';
-	$atts['ratio'] = array_key_exists('ratio', $atts) ? $atts['ratio'] : $atts['width'] && $height ? $atts['width'] / $height : '';
+	$atts['ratio'] = array_key_exists('ratio', $atts) ? $atts['ratio'] : $_width && $_height ? $_width / $_height : '';
 
     $data = '';
     foreach ($atts as $key => $value) {
