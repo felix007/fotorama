@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Fotorama
- * @version 4.4.2
+ * @version 4.4.3
  */
 /*
 Plugin Name: Fotorama
 Plugin URI: http://fotorama.io/
 Description: Transforms standard galleries into fotoramas. Fotorama is a simple, stunning, powerful jQuery gallery. Licensed under the MIT.
 Author: Artem Polikarpov
-Version: 4.4.2
+Version: 4.4.3
 Author URI: https://github.com/artpolikarpov
 */
 
@@ -20,6 +20,10 @@ add_shortcode('gallery', 'fotorama_gallery_shortcode');
 
 function fotorama_gallery_shortcode($atts)
 {
+	if (array_key_exists('fotorama', $atts) && $atts['fotorama'] == 'false') {
+		return gallery_shortcode($atts);
+	}
+
 	$atts['link'] = 'file';
 	$atts['itemtag'] = 'dl';
 	$atts['icontag'] = 'dt';
@@ -75,7 +79,9 @@ function fotorama_gallery_shortcode($atts)
 
     $data = '';
     foreach ($atts as $key => $value) {
-		$data .= "data-$key='$value'";
+		if ($key != 'fotorama') {
+			$data .= "data-$key='$value'";
+		}
 	}
 
     return "<div class='fotorama--wp' $data>$gallery</div>";

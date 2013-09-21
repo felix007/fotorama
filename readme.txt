@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, slider, images, image, plugin, fotorama, photos, slideshow, shortcode
 Requires at least: 3.5
 Tested up to: 3.6.1
-Stable tag: 4.4.2
+Stable tag: 4.4.3
 License: MIT
 License URI: http://fotorama.io/license
 
@@ -41,6 +41,10 @@ Control a single fotorama using [standard gallery shortcode](http://codex.wordpr
     [gallery ids="1,2,3"]
 
 Shortcode will take the following core attributes: `ids`, `orderby`, `order`, `id`, `include`, and `exclude`.
+
+Disable fotorama and use standard gallery with `fotorama="false"`:
+
+    [gallery ids="1,2,3" fotorama="false"]
 
 Fotorama’s default settings are good, so there’s no need to mess with them. Still, you can fine-tune. Add any attributes that are listed [in the original documentation](http://fotorama.io/customize/), but without `data-` prefix.
 
