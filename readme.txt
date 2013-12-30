@@ -3,8 +3,8 @@ Contributors: artpolikarpov
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7M9KK5AQPG6CC
 Tags: gallery, slider, images, image, plugin, fotorama, photos, slideshow, shortcode
 Requires at least: 3.5
-Tested up to: 3.7
-Stable tag: 4.4.7
+Tested up to: 3.8
+Stable tag: 4.4.9
 License: MIT
 License URI: http://fotorama.io/license
 

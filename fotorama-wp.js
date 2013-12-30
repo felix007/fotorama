@@ -1,6 +1,6 @@
 (function ($) {
 	$(function () {
-		$.fn.fotoramaWPApapter = function () {
+		$.fn.fotoramaWPAdapter = function () {
 		    this.each(function () {
 		        var $this = $(this),
 		        	data = $this.data(),
@@ -20,7 +20,7 @@
 		};
 
 		$('.fotorama--wp')
-			.fotoramaWPApapter()
+			.fotoramaWPAdapter()
 			.fotorama();
 	});
 })(jQuery);
